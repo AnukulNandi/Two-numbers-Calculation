@@ -1,1 +1,82 @@
-<h1> wellcome </h1>
+<html>
+
+<head>
+    <title>calculator</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="index.js"></script>
+
+   
+</head>
+<body>
+    <h3 id="text">if you want to enable auto mode click on checkbox </h3>
+    <input type="checkbox" value="click" id="auto" onclick="check()">
+    <button title="click to show history" id="Sho" onclick="shoe();"><i class="fa fa-eye" style="font-size:20px"></i><b>SHOW HISTORY</b></button>
+ <center>
+    <script>
+        document.write("Calculator1");
+    </script>
+    
+        <form>
+
+            <table cellspacing="10" cellpadding="5">
+                <tr>
+                    <th><P class="a2">First_number:</P></th>
+                    <th><input type="number" id="FN" class="del" required></th>
+                   <th rowspan="2">
+                    <p class="btn" onclick="sWaup();"><i  class="fa fa-angle-double-up"></i></p>
+                    <p class="btn" onclick="sWaup();"><i class="fa fa-angle-double-down"></i></p>
+                </th>
+                </tr>
+                <tr>
+                    <th><p class="a2">Second_number:</p></th>
+                    <th><input type="number" id="SN" class="del" required></th>
+                </tr>
+                <tr>
+                    <th class="a2">
+                        <p class="bor">
+                            <button type="button" title="RESET" id="btnReset"  onclick="resUlQ()" >
+                                <i class="fa fa-refresh fa-spin " id="ofrotate" style="font-size:14px; color:red;"></i> RESET</button>
+                            <button type="button" title="CUT" onclick="Del()">
+                                <i class="fa fa-times-circle-o fa-spin" style="font-size:20px;color:green"></i>CUT</button>
+                        </p>
+                    </th>
+                    <th>
+                        <p class="bor2">
+                <button type="button" title="ADD" onClick="calAdd(FN.value,SN.value);" ondblclick="AuTo(FN.value,SN.value);" >ADD
+                                <i class="fa fa-plus-square " style="font-size:16px; color:green"></i></button>
+                            <button type="button" title="SUB" onClick="calSub(FN.value,SN.value);" ondblclick="AuTo1(FN.value,SN.value);">SUB
+                                <i class="fa fa-minus-square " style="font-size:16px;color: brown"></i></button>
+                            <button type="button" title="MUL" onClick="calMul(FN.value,SN.value);" ondblclick="AuTo2(FN.value,SN.value);" >MUL
+                                <i class="fa fa-times-rectangle " style="font-size:16px;color: crimson;"></i></button>
+                            <button type="button" title="DIV" onClick="calDiv(FN.value,SN.value);" ondblclick="AuTo3(FN.value,SN.value);" >DIV
+                                <i class="fa fa-percent " style="font-size:16px; color:blue;"></i></button>
+                            
+                        </p>
+                    </th>
+                </tr>
+                <tr>
+                    <th id="Mess" colspan="2">Message</th>
+                </tr>
+                <tr>
+                    <th colspan="2"  id="resul">
+                        <p class="resu"> RESULT</p>
+                    </th>
+                </tr>
+            </table>
+        </form>
+    </center>
+    <div class="con" id="his1">
+    <h3 class="h3"><center>HISTORY</center></h3>
+    <button type="button" title="CLEAN" onclick="Clr();">CLEAR</button>    
+    <button type="button" title="Print" onclick="printDiv(his);">PRINT</button>
+    <div id="his" style="width: 150px; height: 250px ; border:2px;">
+        <p id="plus"></p>
+        <p id="minu"></p>
+        <p id="multi"></p>
+        <p id="divi"></p>
+    </div>
+    </div>
+</body>
+
+</html>
